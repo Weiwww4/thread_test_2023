@@ -1,7 +1,5 @@
 package com.faintdream.thread.demo05;
 
-import com.faintdream.thread.demo05.MyThread;
-
 public class MyThreadDemo2 {
     public static void main(String[] args) {
 
