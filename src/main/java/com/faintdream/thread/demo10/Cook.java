@@ -16,12 +16,14 @@ public class Cook extends Thread{
 
     @Override
     public void run(){
-        // 不断把面条放到阻塞队列当中
-        try{
-            queue.put("面条");
-            System.out.println("厨师放了一碗面条");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        while (true) {
+            // 不断把面条放到阻塞队列当中
+            try{
+                queue.put("面条");
+                System.out.println("厨师放了一碗面条");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
