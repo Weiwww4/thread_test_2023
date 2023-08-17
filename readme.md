@@ -8,3 +8,4 @@
   AtomicInteger使用场景：AtomicInteger提供原子操作来进行Integer的使用，适合高并发情况下的使用。
   在Java语言中，++i和i++操作并不是线程安全的，在使用的时候，不可避免的会用到synchronized关键字，
   而AtomicInteger则通过一种线程安全的加减操作接口。
+* 锁对象不能是操作对象(数据)本身?
