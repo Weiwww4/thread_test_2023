@@ -60,4 +60,15 @@ public class PrizePool {
 
         return prize;
     }
+
+
+    protected BigDecimal getMaxPrize(){
+        BigDecimal temp = prizes.get(0);
+        for(int i =0;i<prizes.size();i++){
+            if(temp.compareTo(prizes.get(i))<0){
+                temp = prizes.get(i);
+            }
+        }
+        return temp;
+    }
 }

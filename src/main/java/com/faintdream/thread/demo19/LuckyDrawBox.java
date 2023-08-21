@@ -74,9 +74,15 @@ public class LuckyDrawBox implements Runnable {
             // System.out.printf("%s:奖品抽完了\n",Thread.currentThread().getName());
             if (Thread.currentThread().getName().equals("抽奖箱1")) {
                 System.out.printf("%s:奖品抽完了,一共抽到了%s元,最高奖项%s元\n", Thread.currentThread().getName(), prize1,prize1Max);
+                if(prize1Max.compareTo(new BigDecimal(800)) == 0){
+                    System.out.printf("%s:抽到了最大的奖项\n",Thread.currentThread().getName());
+                }
                 this.notifyAll();
             } else if (Thread.currentThread().getName().equals("抽奖箱2")) {
                 System.out.printf("%s:奖品抽完了,一共抽到了%s元,最高奖项%s元\n", Thread.currentThread().getName(), prize2,prize2Max);
+                if(prize2Max.compareTo(new BigDecimal(800)) == 0){
+                    System.out.printf("%s:抽到了最大的奖项\n",Thread.currentThread().getName());
+                }
                 this.notifyAll();
             }
             return false;
